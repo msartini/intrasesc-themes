@@ -199,6 +199,9 @@
 		.portlet-dockbar {
 			display: inline-block;
 			width: 100%;
+			/*Imagem de fundo do header do site*/
+			background-image: url("../images/header-bg.png");
+			background-repeat: repeat-x;
 		}
 
 		.signed-out #_145_navAddControlsNavbarBtn {

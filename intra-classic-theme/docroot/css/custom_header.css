@@ -1,0 +1,9 @@
+#banner {
+	background-image: url("../images/header-bg.png");
+	background-repeat: repeat-x;
+	
+	.menu-header-portal {
+		font-size: 14px;
+		margin: -5px 0 0 167px;
+	}
+} 

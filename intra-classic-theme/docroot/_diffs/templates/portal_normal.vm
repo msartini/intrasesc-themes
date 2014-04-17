@@ -43,7 +43,10 @@ $theme.include($body_top_include)
 
 #dockbar()
 
-<div class="container-fluid" id="wrapper">
+
+##Criei a div --container-row o coloquei a markup header dentro, retirando da div principal::<div class="container-fluid" id="wrapper">
+## ------------------INICIO DIV HEADER DO PORTAL ---------------
+<div class="container-row">
 	<header id="banner" role="banner">
 		<div id="heading">
 			<h1 class="site-title">
@@ -56,19 +59,32 @@ $theme.include($body_top_include)
 						</span>
 					#end
 				</a>
+				
+				#if ($has_navigation || $is_signed_in)
+					<div class="menu-header-portal">
+						#parse ("$full_templates_path/navigation.vm")
+					</div>
+				#end
 
 			</h1>
 
 			<h2 class="page-title">
 				<span>$the_title</span>
 			</h2>
-		 
+		 	
 		</div>
-
-		#if ($has_navigation || $is_signed_in)
-			#parse ("$full_templates_path/navigation.vm")
-		#end
+ 
+		
 	</header>
+</div>
+
+
+## ------------------FIM DIV HEADER DO PORTAL ---------------
+
+
+
+<div class="container-fluid" id="wrapper">
+
 	 
  
 	<div id="content">

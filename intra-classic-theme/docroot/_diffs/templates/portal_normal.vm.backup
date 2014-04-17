@@ -59,22 +59,18 @@ $theme.include($body_top_include)
 						</span>
 					#end
 				</a>
-				
-				#if ($has_navigation || $is_signed_in)
-					<div class="menu-header-portal">
-						#parse ("$full_templates_path/navigation.vm")
-					</div>
-				#end
 
 			</h1>
 
 			<h2 class="page-title">
 				<span>$the_title</span>
 			</h2>
-		 	
+		 
 		</div>
  
-		
+		#if ($has_navigation || $is_signed_in)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
 	</header>
 </div>
 
